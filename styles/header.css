@@ -12,6 +12,11 @@
     align-items: center;
 }
 
+.container__titulo__link {
+    text-decoration: none;
+    color: var(--cor-preto);
+}
+
 .container__botao,
 .container__titulo,
 .opcoes,
