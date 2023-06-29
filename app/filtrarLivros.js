@@ -12,7 +12,7 @@ function filtrarLivros() {
 
     if (categoria === "disponivel") {
         const valorTotal = calcularValorTotal(livrosFiltrados);
-        exibirLivrosDisponiveis();
+        exibirLivrosDisponiveis(valorTotal);
     }
     
 }
@@ -25,10 +25,10 @@ function filtrarPorDisponibilidade() {
     return livros.filter((livro) => livro.quantidade > 0);
 }
 
-function exibirLivrosDisponiveis() {
+function exibirLivrosDisponiveis(valor) {
     elementoLivrosDisponiveis.innerHTML = `
         <div class="livros__disponiveis">
-            <p>Todos os livros disponíveis por R$ <span id="valor">299,00</span></p>
+            <p>Todos os livros disponíveis por R$ <span id="valor">${valor}</span></p>
         </div>
     `;
 }
